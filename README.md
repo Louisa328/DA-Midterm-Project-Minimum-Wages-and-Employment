@@ -17,4 +17,4 @@ changes in NJ vs. Pennsylvania (control) before and after the policy.
 
 ## Data
 Source: https://davidcard.berkeley.edu/data_sets.html  
-410 fast-food restaurants, surveyed Feb 1992 and Nov 1992.
+"Minimum Wages and Employment: A Case Study of the Fast Food Industry in New Jersey and Pennsylvania." (with Alan Krueger), American Economic Review 84, (September 1994).
