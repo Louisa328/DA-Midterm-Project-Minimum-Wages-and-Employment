@@ -6,9 +6,7 @@
 **Track**: Difference-in-Differences (DID)
 
 ## Paper
-Card, D., & Krueger, A.B. (1994). Minimum Wages and Employment: 
-A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania. 
-*American Economic Review*, 84(4), 772–793.
+Card, D., & Krueger, A. B. (1994). Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania.
 
 ## Research Question
 Did New Jersey's 1992 minimum wage increase ($4.25→$5.05) affect 
