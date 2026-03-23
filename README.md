@@ -55,42 +55,36 @@ Manually replicated the core results of Card & Krueger (1994) without AI assista
 ## Phase 3: Extension — Heterogeneous Treatment Effects
 
 ### Research Question
-Does the employment effect of the 1992 NJ minimum wage increase differ between 
+Does the employment effect of the 1992 NJ minimum wage increase differ between
 **franchise** and **company-owned** fast-food restaurants?
 
 ### Data Enrichment
 - Merged BLS LAUS county-level unemployment rates via FRED API
-- Coverage: representative county per region (Hudson NJ, Middlesex NJ, Camden NJ, 
-  Montgomery PA, Philadelphia PA), February and November 1992
-- Used pre-treatment unemployment level (`unemp_feb92`) as BLS control variable,
-  capturing structural labor market differences across regions
-- Geographic mapping: C&K region dummies (northj/centralj/southj/pa1/pa2) → 
-  single representative county per region
-- Parallel trends verified using state-level BLS data (1990–1992): NJ and PA 
-  followed closely aligned unemployment trajectories prior to April 1992
+- Coverage: all NJ counties (21) and PA counties (5), Feb and Nov 1992
+- Computed labor-force-weighted regional averages (weighted by county LFN)
+- BLS data used for: (1) parallel trends verification (2) descriptive statistics
+- Not used as regression control — see Empirical Strategy
 
 ### Empirical Strategy
-- Interaction term DID: `delta_fte ~ nj × co_owned + unemp_feb92 + controls`
-- Subgroup regressions for 5 groups with coefficient forest plot visualization
-- 4-model robustness check showing HTE stable across specifications
+- Interaction term DID: `delta_fte ~ nj × co_owned + C(chain) + wage_st`
+- Chain brand fixed effects control for structural heterogeneity across restaurants
+- Subgroup regressions for 5 groups with coefficient forest plot
+- 4-model robustness check confirming HTE stability across specifications
 
 ### Key Findings
 | Subgroup | β (DID) | p-value |
 |---|---|---|
-| All restaurants (baseline) | +1.86 | 0.238 |
-| Franchise (co_owned=0) | +2.81 | 0.234 |
-| Company-owned (co_owned=1) | −0.03 | 0.983 |
-| Low wage (wage_st ≤ 4.25) | +2.88 | 0.293 |
-| High wage (wage_st > 5.05) | −5.82 | 0.039** |
+| All restaurants (baseline) | +2.32 | 0.088* |
+| Franchise (co_owned=0) | +2.51 | 0.195 |
+| Company-owned (co_owned=1) | +1.24 | 0.363 |
+| Low wage (wage_st ≤ 4.25) | +4.14 | 0.033** |
+| High wage (wage_st > 5.05) | −4.44 | 0.051* |
 
-- The `NJ × Company-owned` interaction coefficient remains stable across all 
-  specifications (−1.095 → −0.795 → −0.592), confirming the HTE is not driven 
-  by regional economic confounding
-- Franchise restaurants show a larger positive employment response than 
-  company-owned stores, consistent with independent operators bearing full 
-  marginal labor costs
-- High-wage stores experience a significant employment decline, echoing 
-  Ropponen (2010)
+- `NJ × Company-owned` coefficient stable across specifications
+  (−0.441 → −0.480 → −0.994), confirming HTE not driven by brand composition
+- Franchise restaurants show larger positive response than company-owned stores,
+  consistent with independent operators bearing full marginal labor costs
+- High-wage stores experience significant employment decline, echoing Ropponen (2010)
 
 ---
 
