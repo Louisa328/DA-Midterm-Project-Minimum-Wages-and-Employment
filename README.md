@@ -69,7 +69,6 @@ A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania.
 │   ├── 01_Data_Cleaning.ipynb         # Phase 1: Data setup
 │   ├── 02_Replication_Analysis.ipynb  # Phase 2: C&K replication
 │   └── 03_Extension_and_Results.ipynb # Phase 3: HTE extension
-├── outputs/
 │   ├── forest_plot_HTE.png            # Figure 1: Coefficient forest plot
 │   ├── parallel_trends_check.png      # Figure 2: Parallel trends validation
 │   └── regression_table.html          # Table 2: Stargazer regression table
