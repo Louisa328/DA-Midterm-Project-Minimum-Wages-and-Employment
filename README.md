@@ -29,7 +29,7 @@ BLS unemployment data showing parallel pre-treatment trends from 1990 to 1992.
 
 ### Visual Evidence
 
-![Heterogeneous Treatment Effects Forest Plot](outputs/forest_plot_HTE.png)
+![Heterogeneous Treatment Effects Forest Plot](notebooks/forest_plot_HTE.png)
 
 *Figure 1: Coefficient forest plot showing DID estimates (β) and 95% confidence 
 intervals for five subgroups. Blue = significant (p < 0.1). Controls: chain brand 
