@@ -1,0 +1,21 @@
+# Card & Krueger (1994) Replication & Extension
+# Python dependencies
+
+# Core data manipulation
+pandas
+numpy
+
+# Econometrics & regression
+statsmodels
+
+# FRED API for BLS data
+fredapi
+
+# Visualization
+matplotlib
+
+# Regression tables
+stargazer
+
+# Jupyter display
+ipython
